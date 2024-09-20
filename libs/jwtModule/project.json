@@ -1,0 +1,19 @@
+{
+  "name": "jwtModule",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/jwtModule/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/jwtModule",
+        "main": "libs/jwtModule/src/index.ts",
+        "tsConfig": "libs/jwtModule/tsconfig.lib.json",
+        "assets": ["libs/jwtModule/*.md"]
+      }
+    }
+  }
+}

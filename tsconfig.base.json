@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@edu/contracts": ["libs/contracts/src/index.ts"],
+      "@edu/jwtModule": ["libs/jwtModule/src/index.ts"],
+      "@edu/prisma-client": ["libs/prisma-client/src/index.ts"],
+      "@edu/prisma-schema": ["libs/prisma-schema/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

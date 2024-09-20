@@ -1,0 +1,44 @@
+{
+  "name": "prisma-schema",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/prisma-schema/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/prisma-schema",
+        "main": "libs/prisma-schema/src/index.ts",
+        "tsConfig": "libs/prisma-schema/tsconfig.lib.json",
+        "assets": ["libs/prisma-schema/*.md"]
+      }
+    },
+    "init": {
+      "command": "prisma init",
+      "options": {
+        "cwd": "libs/prisma-schema"
+      }
+    },
+    "migrate": {
+      "command": "prisma migrate dev",
+      "options": {
+        "cwd": "libs/prisma-schema"
+      }
+    },
+    "gen": {
+      "command": "prisma generate",
+      "options": {
+        "cwd": "libs/prisma-schema"
+      }
+    },
+
+    "seed": {
+      "command": "npx ts-node index.ts",
+      "options": {
+        "cwd": "libs/prisma-schema/seed"
+      }
+    }
+  }
+}

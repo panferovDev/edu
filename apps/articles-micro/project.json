@@ -1,0 +1,26 @@
+{
+  "name": "articles-micro",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/articles-micro/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "articles-micro:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "articles-micro:build:development"
+        },
+        "production": {
+          "buildTarget": "articles-micro:build:production"
+        }
+      }
+    }
+  }
+}
